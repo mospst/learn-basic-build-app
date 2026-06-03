@@ -201,6 +201,7 @@ a:hover {
 .practice-panel,
 .terminal-panel,
 .prompt-panel,
+.workflow-picture-panel,
 .reference-panel {
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -254,6 +255,7 @@ a:hover {
 .practice-panel,
 .terminal-panel,
 .prompt-panel,
+.workflow-picture-panel,
 .reference-panel {
   padding: 20px;
 }
@@ -443,6 +445,46 @@ a:hover {
   gap: 20px;
 }
 
+.workflow-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 20px;
+  align-items: start;
+}
+
+.workflow-figure {
+  margin: 0;
+}
+
+.workflow-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f8fafb;
+}
+
+.workflow-notes {
+  color: #39414b;
+  line-height: 1.62;
+}
+
+.workflow-notes p {
+  margin: 0 0 14px;
+}
+
+.workflow-notes ul {
+  display: grid;
+  gap: 10px;
+  padding-left: 18px;
+  margin: 0;
+}
+
+.workflow-notes li::marker {
+  color: var(--teal);
+}
+
 .panel-heading {
   display: flex;
   align-items: start;
@@ -630,6 +672,7 @@ a:hover {
 
   .content-grid,
   .toolbelt,
+  .workflow-layout,
   .reference-panel {
     grid-template-columns: 1fr;
   }
