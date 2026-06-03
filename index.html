@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Tools Lab</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Course modules">
+        <div class="brand-block">
+          <div class="brand-mark" aria-hidden="true">AI</div>
+          <div>
+            <p class="eyebrow">Local simulator</p>
+            <h1>AI Tools Lab</h1>
+          </div>
+        </div>
+
+        <nav class="module-nav" id="moduleNav" aria-label="Lessons"></nav>
+
+        <div class="sidebar-footer">
+          <p>Reviewed with current public docs on June 3, 2026.</p>
+          <button class="text-button" id="resetProgress" type="button">Reset progress</button>
+        </div>
+      </aside>
+
+      <main class="workspace">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow" id="moduleType">Module</p>
+            <h2 id="moduleTitle">Loading</h2>
+          </div>
+          <div class="progress-wrap" aria-label="Course progress">
+            <span id="progressLabel">0% complete</span>
+            <div class="progress-track">
+              <div class="progress-fill" id="progressFill"></div>
+            </div>
+          </div>
+        </header>
+
+        <section class="content-grid" aria-label="Lesson content">
+          <article class="lesson-panel">
+            <p class="lesson-summary" id="moduleSummary"></p>
+            <div class="visual-map" id="visualMap" aria-label="Concept map"></div>
+            <div class="section-block">
+              <h3>Key Ideas</h3>
+              <ul class="key-list" id="keyIdeas"></ul>
+            </div>
+            <div class="section-block">
+              <h3>Professor Note</h3>
+              <p id="professorNote"></p>
+            </div>
+          </article>
+
+          <aside class="practice-panel">
+            <div class="mission-block">
+              <p class="eyebrow">Mission</p>
+              <h3 id="missionTitle"></h3>
+              <p id="missionText"></p>
+              <button class="primary-button" id="markDone" type="button">Mark module done</button>
+            </div>
+
+            <div class="quiz-block">
+              <p class="eyebrow">Quick Check</p>
+              <h3 id="quizQuestion"></h3>
+              <div class="quiz-options" id="quizOptions"></div>
+              <p class="quiz-feedback" id="quizFeedback" aria-live="polite"></p>
+            </div>
+          </aside>
+        </section>
+
+        <section class="toolbelt" aria-label="Interactive labs">
+          <div class="terminal-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">Command Dojo</p>
+                <h3>Safe Terminal Simulator</h3>
+              </div>
+              <span class="status-pill">No real commands run</span>
+            </div>
+            <div class="terminal-window" id="terminalOutput" aria-live="polite"></div>
+            <form class="terminal-form" id="terminalForm">
+              <label for="terminalInput">Command</label>
+              <div class="command-row">
+                <span class="prompt">$</span>
+                <input
+                  id="terminalInput"
+                  autocomplete="off"
+                  spellcheck="false"
+                  placeholder="Try: help"
+                />
+                <button type="submit">Run</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="prompt-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">Prompt Gym</p>
+                <h3>Improve an AI Request</h3>
+              </div>
+            </div>
+            <textarea id="promptInput" rows="7"></textarea>
+            <div class="prompt-actions">
+              <button class="primary-button" id="analyzePrompt" type="button">Analyze prompt</button>
+              <button class="text-button" id="loadPromptExample" type="button">Load example</button>
+            </div>
+            <div class="prompt-score" id="promptScore" aria-live="polite"></div>
+          </div>
+        </section>
+
+        <section class="reference-panel" aria-label="Source references">
+          <div>
+            <p class="eyebrow">Source Trail</p>
+            <h3>Where this app gets its advice</h3>
+          </div>
+          <div class="source-links">
+            <a href="https://platform.openai.com/docs/guides/prompt-engineering" target="_blank" rel="noreferrer">OpenAI prompt engineering</a>
+            <a href="https://openai.github.io/openai-agents-python/tools/" target="_blank" rel="noreferrer">OpenAI Agents tools</a>
+            <a href="https://developers.openai.com/codex/mcp" target="_blank" rel="noreferrer">Codex MCP</a>
+            <a href="https://developers.openai.com/codex/skills" target="_blank" rel="noreferrer">Codex skills</a>
+            <a href="https://developers.openai.com/codex/plugins" target="_blank" rel="noreferrer">Codex plugins</a>
+            <a href="https://modelcontextprotocol.io/docs/getting-started/intro" target="_blank" rel="noreferrer">MCP introduction</a>
+            <a href="https://www.anthropic.com/engineering/building-effective-agents" target="_blank" rel="noreferrer">Anthropic agents</a>
+            <a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/claude-4-best-practices" target="_blank" rel="noreferrer">Claude prompting</a>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
