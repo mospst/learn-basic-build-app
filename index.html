@@ -100,6 +100,47 @@
           </div>
         </section>
 
+        <section class="freshman-panel" aria-label="Freshman programmer toolkit">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Freshman Toolkit</p>
+              <h3>What Every New Programmer Should Know First</h3>
+            </div>
+            <span class="status-pill">Click to learn</span>
+          </div>
+
+          <div class="freshman-grid">
+            <article class="interactive-card">
+              <h4>What should I do next?</h4>
+              <p>Pick your current feeling. The app will show the safest next learning path.</p>
+              <div class="choice-list" id="pathChoices"></div>
+              <div class="result-box" id="pathResult" aria-live="polite"></div>
+            </article>
+
+            <article class="interactive-card">
+              <h4>File Type Explorer</h4>
+              <p>Click common files to learn what they are for and what to ask AI about them.</p>
+              <div class="chip-list" id="fileTypeChoices"></div>
+              <div class="result-box" id="fileTypeResult" aria-live="polite"></div>
+            </article>
+
+            <article class="interactive-card">
+              <h4>Command Recipes</h4>
+              <p>Commands are recipes: tool + action + target. Click one to decode it.</p>
+              <div class="chip-list" id="commandRecipeChoices"></div>
+              <div class="result-box" id="commandRecipeResult" aria-live="polite"></div>
+            </article>
+
+            <article class="interactive-card">
+              <h4>Debugging Ladder</h4>
+              <p>When something looks wrong, choose where to check first.</p>
+              <div class="debug-scenario" id="debugScenario"></div>
+              <div class="debug-actions" id="debugActions"></div>
+              <div class="result-box" id="debugResult" aria-live="polite"></div>
+            </article>
+          </div>
+        </section>
+
         <section class="toolbelt" aria-label="Interactive labs">
           <div class="terminal-panel">
             <div class="panel-heading">

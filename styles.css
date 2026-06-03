@@ -202,6 +202,7 @@ a:hover {
 .terminal-panel,
 .prompt-panel,
 .workflow-picture-panel,
+.freshman-panel,
 .reference-panel {
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -256,6 +257,7 @@ a:hover {
 .terminal-panel,
 .prompt-panel,
 .workflow-picture-panel,
+.freshman-panel,
 .reference-panel {
   padding: 20px;
 }
@@ -485,6 +487,115 @@ a:hover {
   color: var(--teal);
 }
 
+.freshman-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.interactive-card {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  min-height: 330px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fbfcfd;
+}
+
+.interactive-card h4 {
+  margin: 0;
+  font-size: 1.02rem;
+  letter-spacing: 0;
+}
+
+.interactive-card p {
+  margin: 0;
+  color: #4d5661;
+  line-height: 1.55;
+}
+
+.choice-list,
+.chip-list,
+.debug-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.choice-button,
+.chip-button,
+.debug-button {
+  min-height: 38px;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+  color: var(--ink);
+  font-weight: 800;
+  text-align: left;
+}
+
+.choice-button:hover,
+.choice-button.active,
+.chip-button:hover,
+.chip-button.active,
+.debug-button:hover,
+.debug-button.active {
+  border-color: var(--teal);
+  background: #eef3f1;
+}
+
+.debug-button.correct {
+  border-color: var(--success);
+  background: #edf8f0;
+}
+
+.debug-button.incorrect {
+  border-color: var(--danger);
+  background: #fbefed;
+}
+
+.result-box,
+.debug-scenario {
+  padding: 13px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+  color: #38424d;
+  line-height: 1.58;
+}
+
+.result-box strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--ink);
+}
+
+.result-box ol,
+.result-box ul {
+  display: grid;
+  gap: 6px;
+  padding-left: 20px;
+  margin: 8px 0 0;
+}
+
+.result-box code {
+  padding: 2px 5px;
+  border-radius: 5px;
+  background: #eef3f1;
+  color: #175a54;
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Consolas,
+    "Liberation Mono",
+    monospace;
+  font-size: 0.9em;
+}
+
 .panel-heading {
   display: flex;
   align-items: start;
@@ -673,6 +784,7 @@ a:hover {
   .content-grid,
   .toolbelt,
   .workflow-layout,
+  .freshman-grid,
   .reference-panel {
     grid-template-columns: 1fr;
   }
